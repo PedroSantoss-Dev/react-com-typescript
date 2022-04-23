@@ -1,14 +1,13 @@
-import { ThemeProvider } from "@mui/material";
 import { BrowserRouter, } from "react-router-dom";
 import { AppRoutes } from "./routes/index"
-import { LigthTheme } from './themes/ligth'
+import { AppThemeProvider } from "./shared/contents/ThemeContext";
 export const App = () => {
   return (
-   <ThemeProvider theme={LigthTheme}>
+   <AppThemeProvider>
    <BrowserRouter>
     <AppRoutes/>
    </BrowserRouter>
-   </ThemeProvider> 
+   </AppThemeProvider> 
   );
 }
 
